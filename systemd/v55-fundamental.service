@@ -1,0 +1,40 @@
+[Unit]
+Description=V55 Run-Ready Fundamental Intelligence Supervisor
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=v55fund
+Group=v55fund
+WorkingDirectory=/opt/v55-fundamental
+EnvironmentFile=/etc/v55-fundamental.env
+Environment=V52_PACKAGE_ROOT=/opt/v55-fundamental
+Environment=PYTHONPATH=/opt/v55-fundamental/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStartPre=/opt/v55-fundamental/.venv/bin/python -m v52.diagnostics.preflight
+ExecStart=/opt/v55-fundamental/.venv/bin/python -m v52.runtime.supervisor
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=75
+KillSignal=SIGTERM
+KillMode=mixed
+UMask=0027
+LimitNOFILE=131072
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/v55-fundamental
+
+[Install]
+WantedBy=multi-user.target
