@@ -1,0 +1,14 @@
+V57 ALL-CRYPTO RUNTIME-MERGED BUILD
+
+- External V57 runtime hotfix behavior is already merged into src/.
+- Dynamic CEX universe replaces BTC/ETH/SUI as the authoritative crypto coverage list.
+- Futures/perpetual + spot directories are scanned.
+- Every discovered token is compact-screened each refresh.
+- HOT tokens get bounded deep WebSocket microstructure; WARM tokens remain fully activatable on demand.
+- HOT set refreshes by planned 1-hour stream rotation.
+- Market anomalies are handed to the Brain but cannot bypass LIVE qualification.
+- Spot-first on-demand reference pricing is available for long-tail tokens.
+- 205 tests validated after the final changes (run in groups due shell timeout constraints).
+- No live-order execution was added.
+
+See docs/V57_ALL_CRYPTO_AUDIT_REPORT.md and docs/V57_CRYPTO_UNIVERSE_UPGRADE.md.

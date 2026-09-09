@@ -1,0 +1,135 @@
+{
+  "added_files": [
+    {
+      "bytes": 831,
+      "path": "ALL_CRYPTO_BUILD_NOTES.txt",
+      "sha256": "b17e9328b30a95b0f65e46ecb329799c91435509a73129633d7be2f841e19b11"
+    },
+    {
+      "bytes": 8467,
+      "path": "docs/V57_ALL_CRYPTO_AUDIT_REPORT.md",
+      "sha256": "2cd8c306929de8c965bc8a3b9756a39300f8e24a40625b1cb4fb9b28ff398501"
+    },
+    {
+      "bytes": 2381,
+      "path": "docs/V57_CRYPTO_UNIVERSE_UPGRADE.md",
+      "sha256": "7122754f89a2bf2b30fe3d76a7e1b7b3b1d29e544fc4f64c4f15ccb93efac7a9"
+    },
+    {
+      "bytes": 23331,
+      "path": "src/v52/market/crypto_universe.py",
+      "sha256": "ba4116634b2b48de06c35fc79361088fdffd9ba85b010725f3e13ed575d5fc9c"
+    },
+    {
+      "bytes": 5931,
+      "path": "tests/test_v57_crypto_universe.py",
+      "sha256": "71ebc68918636a700ca9d83e17ac2ea0bc80913e743c83320930d0733677f571"
+    }
+  ],
+  "build": "V57_ALL_CRYPTO_RUNTIME_MERGED_FINAL",
+  "changed_files": [
+    {
+      "bytes": 18801,
+      "original_sha256": "fc980b8f90ebc20963b15f2950cae4859920681c3d14e7e6b456ab22ada7b732",
+      "path": ".env.example",
+      "sha256": "ed50a853eb2224919627cbf108712ba07779204bd480d2a89508f2db79fb200f"
+    },
+    {
+      "bytes": 141905,
+      "original_sha256": "ccec7d855a9c9d05c0c1d9d0f2e33e58de9802953a697b7ee47b014ca50cd7ea",
+      "path": "config/settings.schema.json",
+      "sha256": "6d14b671002af85cfd3c24e666511bca82f097ca8ab2d91b8292f3131d746a05"
+    },
+    {
+      "bytes": 4213,
+      "original_sha256": "78fd0fe5049e7e1e8b19eea8d0e809c765c469472538361cd39dafd4cd08d6db",
+      "path": "docs/CONFIGURATION.md",
+      "sha256": "2afa87ae7791c37d19e68f5b8c17803c7572e1527e7323559094abdfe42c9071"
+    },
+    {
+      "bytes": 31053,
+      "original_sha256": "fe3ff5073baa1101340d775b5884b363cbc50b65c4c184635ea67d5b783e7322",
+      "path": "src/v52/config.py",
+      "sha256": "cc01a4ffc7d0244ddd018b7352075016b6645d057bea56396302a0be97bf4806"
+    },
+    {
+      "bytes": 10781,
+      "original_sha256": "b61a1321fd48a925ca33749c95fbe7ced63b802b7cc74f8ea80d7fce4e4e4aa9",
+      "path": "src/v52/intelligence/features.py",
+      "sha256": "d159018d24a2ffa8d2b3305cd1337466f4bc39f0a99b4a906b1281501249e270"
+    },
+    {
+      "bytes": 12462,
+      "original_sha256": "5bb6c89f3614e7defca0f6ffb136b820ba73a437ea0cb202567a51dcd8e01136",
+      "path": "src/v52/intelligence/market_response.py",
+      "sha256": "14f781b4ffab850ca3fe17510b43ecbe0c08b7668a453fcb592815fb334f98f5"
+    },
+    {
+      "bytes": 28246,
+      "original_sha256": "f1c7a6ed32d367eb54123f71a6354bb4d91d5de0dd16371f616285da604e0ef6",
+      "path": "src/v52/intelligence/observation.py",
+      "sha256": "306863e4655fb6e4a1ee46745be48a952301905119c63eaa4d117ce8155d86d7"
+    },
+    {
+      "bytes": 8976,
+      "original_sha256": "34f207590752643352e9bf7a2c0ea5549864d656e6f8890b3f9c7ec8002fea22",
+      "path": "src/v52/intelligence/openai_semantics.py",
+      "sha256": "0406989d5c69660db89c763d51efa561eabf4900dde9b20915568154b9c40bd2"
+    },
+    {
+      "bytes": 25232,
+      "original_sha256": "5d64b8bb8ad25a7a70b0e4e0e607ba4e4ddf90c6d72924c51c5f1a1e4b07d471",
+      "path": "src/v52/intelligence/reference_market.py",
+      "sha256": "fbe96ddfec52a7ef6ed94297d8ce33db8f5527e018b0c12cb4d38755fc28d24e"
+    },
+    {
+      "bytes": 59225,
+      "original_sha256": "901d96da63a02f14164dccf15cec6cd3c26a3b8e52b8571c7dbd28114b1c33d4",
+      "path": "src/v52/intelligence/research.py",
+      "sha256": "9e32143cfb04894f3d8e81dfadd483e88c8562dab6efe3b887bbc8e8257a7940"
+    },
+    {
+      "bytes": 29558,
+      "original_sha256": "7ea063113fdd7b088b917d60ac29ff7e9816e59bedb83fbb329463f7efc3277b",
+      "path": "src/v52/intelligence/service.py",
+      "sha256": "16a47b34e0e682b41fc5567dd84c45726bda57ffad283c38285d5729d2e53bc8"
+    },
+    {
+      "bytes": 17615,
+      "original_sha256": "40310954dae019c9f890826e6a739dddd2050ffff4f69916b5043adc8f8e46d0",
+      "path": "src/v52/intelligence/taxonomy.py",
+      "sha256": "547bb8590f54e8c4cbbfbe822401de839d384c40efe99e0f7db033d7608e6cb7"
+    },
+    {
+      "bytes": 4531,
+      "original_sha256": "652e94a7bd5a6cd2313ef6407636f06dc5b7473b07629f96b4c4edf3b89f1207",
+      "path": "src/v52/intelligence/telegram_producers.py",
+      "sha256": "80fb31e7b0f3e95b65d957bb670ae79ff8f5b0b714ead3e1dd31c52999ac3712"
+    },
+    {
+      "bytes": 60416,
+      "original_sha256": "4e7d356e9d3b4482b4ce992cbee4de684ad3f5d2d57ed7b2df6043e9186afd9a",
+      "path": "src/v52/market/service.py",
+      "sha256": "d612fcc06f405d8a58194666f5250b07f1fc981cf6e4b280a8b238986b7c13d0"
+    },
+    {
+      "bytes": 21148,
+      "original_sha256": "e7a5653695271b2e380327ee0152902bbea8413efd70cc8d8c1b72e93710b5ea",
+      "path": "tests/test_v54_zero_gap_blockers.py",
+      "sha256": "5cf0105aa4ed8c25ae3e5d6fad95733d4d7921cbc232d148f415f957f719efa4"
+    }
+  ],
+  "created_utc": "2026-09-09T11:35:13.737720+00:00",
+  "notes": [
+    "External patch_v57_runtime_final.py behavior was applied before all-crypto changes.",
+    "No Xray/VLESS secrets or outer VPS backup files are included in this release ZIP."
+  ],
+  "removed_files": [],
+  "source_archive": "V57_TRUE_AUTONOMOUS_MULTI_ASSET_FUNDAMENTAL_INTELLIGENCE_BRAIN_ABSOLUTE_FINAL.zip",
+  "source_archive_sha256": "ea289a8e536ddcb62207c465764ffed76c642b716de327801cf7540b0494a016",
+  "test_validation": {
+    "collected": 205,
+    "execution": "grouped to avoid shell timeout",
+    "passed": 205
+  }
+}
