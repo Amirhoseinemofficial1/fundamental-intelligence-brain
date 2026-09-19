@@ -1,0 +1,10 @@
+[Unit]
+Description=V57 bounded-storage safety guard
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/v57-disk-guard.sh
+Nice=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/v57-fundamental

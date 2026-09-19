@@ -1,0 +1,37 @@
+{
+  "release": "V57_2_BOUNDED_SEMANTIC_ADAPTIVE",
+  "generated_at_utc": "2026-09-19T00:32:25.236328+00:00",
+  "local_windows": {
+    "status": "PASS",
+    "passed": 223,
+    "skipped": 3,
+    "seconds": 69.02,
+    "command": "PYTHONPATH=src python -m pytest -q"
+  },
+  "bounded_adaptive_tests": {
+    "status": "PASS",
+    "test_file": "tests/test_v57_2_bounded_adaptive.py",
+    "coverage": [
+      "structured bucket deduplication and payload cap",
+      "market semantic bucket upsert",
+      "raw market journal disabled",
+      "news payload cap with evidence fields retained",
+      "76x32x7 semantic adaptive learning",
+      "cross-thread schema initialization serialization",
+      "typed adaptive learning report",
+      "pre-queue fundamental noise filtering and post-processing payload release",
+      "shared OpenAI rate-limit cooldown for Responses and embeddings",
+      "active-tree build artifact cleanup and manifest verification",
+      "normalized local multilingual lexical fallback embedding"
+    ]
+  },
+  "compileall": "PASS",
+  "manifest_verify": "PASS",
+  "rar_integrity": "PASS",
+  "native_debian_final_source_tree_full_suite": {
+    "status": "PENDING_LOCAL_SEMANTIC_FINAL_VALIDATION"
+  },
+  "native_debian_systemd": {
+    "status": "PENDING_LOCAL_SEMANTIC_FINAL_VALIDATION"
+  }
+}
