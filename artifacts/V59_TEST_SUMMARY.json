@@ -1,0 +1,29 @@
+{
+  "release": "V59_IMPACT_ROUTED_DATA_BRAIN",
+  "validated_at_utc": "2026-09-20T18:12:00Z",
+  "python": "3.12.1",
+  "platform": "Windows local workspace",
+  "compileall": {
+    "scope": ["src", "tests", "scripts"],
+    "status": "passed"
+  },
+  "pytest": {
+    "command": "PYTHONPATH=src .venv/Scripts/python -m pytest -q tests",
+    "passed": 249,
+    "skipped": 3,
+    "failed": 0,
+    "duration_seconds": 615.39
+  },
+  "focused_fastlane_and_data_plane": {
+    "status": "passed",
+    "proof": "999 FIFO P3 changes plus change 1000 P0; P0 selected first, FIFO cursor unchanged, durable receipt prevents repeat eligibility"
+  },
+  "live_public_source_contracts": {
+    "command": "PYTHONPATH=src .venv/Scripts/python scripts/validate_v59_data_plane.py",
+    "checked_at_utc": "2026-09-20T18:01:23Z",
+    "required_failures": [],
+    "verified": ["Treasury nominal", "Treasury TIPS real yield", "NY Fed SOFR", "NY Fed EFFR and target midpoint", "BLS six-series macro", "CFTC positioning", "SPDR GLD holdings", "iShares IAU holdings"],
+    "credential_skipped": ["EIA API", "World Gold Council authenticated workbooks"]
+  },
+  "evidence_boundary": "Local tests and live public endpoint shapes are verified. EIA and WGC live values require credentials and were not claimed as verified. Profitability and qualification require subsequent observation/shadow/OOS evidence."
+}

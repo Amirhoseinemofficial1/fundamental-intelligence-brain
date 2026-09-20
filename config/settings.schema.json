@@ -1,0 +1,4726 @@
+{
+  "schema": "51.2-config",
+  "policy": "Capability-preserving V52 configuration; V33/V34/V35/V36/V50 functional contracts are restored as V52-native isolated services or explicit authorized connector/query contracts.",
+  "settings": [
+    {
+      "name": "DATA_DIR",
+      "type": "string",
+      "default": "/var/lib/v57-fundamental",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "LOG_LEVEL",
+      "type": "string",
+      "default": "INFO",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "HTTP_USER_AGENT",
+      "type": "string",
+      "default": "V55-Fundamental/55.0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SERVICE_STATUS_SECONDS",
+      "type": "integer",
+      "default": "5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SERVICE_STALE_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SHUTDOWN_GRACE_SECONDS",
+      "type": "integer",
+      "default": "45",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SHUTDOWN_DRAIN_SECONDS",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SQLITE_BUSY_TIMEOUT_MS",
+      "type": "integer",
+      "default": "15000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "SQLITE_SYNCHRONOUS",
+      "type": "string",
+      "default": "FULL",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Copy to .env and fill secrets. Never commit the populated .env."
+    },
+    {
+      "name": "NEWS_HOT_CONCURRENCY",
+      "type": "integer",
+      "default": "16",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_COVERAGE_CONCURRENCY",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_DISCOVERY_CONCURRENCY",
+      "type": "integer",
+      "default": "6",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_HOT_MIN_POLL_SECONDS",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_HOT_MAX_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_COVERAGE_MIN_POLL_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_COVERAGE_MAX_POLL_SECONDS",
+      "type": "integer",
+      "default": "180",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_HTTP_TOTAL_TIMEOUT",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_HTTP_CONNECT_TIMEOUT",
+      "type": "integer",
+      "default": "3",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_HTTP_READ_TIMEOUT",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_MAX_BODY_BYTES",
+      "type": "integer",
+      "default": "4000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_RAW_BACKPRESSURE_ROWS",
+      "type": "integer",
+      "default": "250000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_RAW_BATCH",
+      "type": "integer",
+      "default": "100",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_RAW_LEASE_SECONDS",
+      "type": "integer",
+      "default": "60",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_MATERIALITY_THRESHOLD",
+      "type": "integer",
+      "default": "3",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_ALERT_MAX_AGE_SECONDS",
+      "type": "integer",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_ENRICHMENT_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_ENRICHMENT_CONCURRENCY",
+      "type": "integer",
+      "default": "3",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_ENRICHMENT_MAX_AGE_SECONDS",
+      "type": "integer",
+      "default": "3600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_GOOGLE_FALLBACK_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "NEWS_GOOGLE_TIER0_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "News hot / coverage / discovery planes"
+    },
+    {
+      "name": "GDELT_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_CONCURRENCY",
+      "type": "integer",
+      "default": "6",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "0.25",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_TIMEOUT_SECONDS",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_MAX_RECORDS",
+      "type": "integer",
+      "default": "250",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_TIMESPAN",
+      "type": "string",
+      "default": "15min",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GDELT_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_CONCURRENCY",
+      "type": "integer",
+      "default": "24",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_PER_HOST_LIMIT",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "0.04",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_TOP_POLL_SECONDS",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_TOPIC_POLL_SECONDS",
+      "type": "integer",
+      "default": "24",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_PUBLISHER_FALLBACK_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_PUBLISHER_BATCH_DOMAINS",
+      "type": "integer",
+      "default": "6",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_PUBLISHER_WHEN",
+      "type": "string",
+      "default": "1h",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_PUBLISHER_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_MIN_POLL_SECONDS",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_MAX_POLL_SECONDS",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "GOOGLE_MESH_STARTUP_SPREAD_SECONDS",
+      "type": "integer",
+      "default": "15",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_CONCURRENCY",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_HOST_GAP_SECONDS",
+      "type": "number",
+      "default": "0.25",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_TIMEOUT_SECONDS",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_MAX_BODY_BYTES",
+      "type": "integer",
+      "default": "12000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_CANDIDATES_PER_SITE",
+      "type": "integer",
+      "default": "6",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_MAX_ITEMS_PER_FILE",
+      "type": "integer",
+      "default": "500",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_NESTED_DEPTH",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_NESTED_MAX",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_SITES_PER_CYCLE",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "SITEMAP_CYCLE_SECONDS",
+      "type": "integer",
+      "default": "1800",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_SYNC_RULES",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_RECENT_SEARCH_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_RECENT_SEARCH_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_MIN_REQUEST_GAP_SECONDS",
+      "type": "integer",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_HANDLE_GROUP_SIZE",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "X_RULE_MAX",
+      "type": "integer",
+      "default": "25",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "BLUESKY_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "BLUESKY_JETSTREAM_URL",
+      "type": "string",
+      "default": "wss://jetstream.us-east.bsky.network/xrpc/network.bsky.jetstream.subscribeEvents",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "BLUESKY_MAX_MESSAGE_BYTES",
+      "type": "integer",
+      "default": "4000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "BLUESKY_CURSOR_FLUSH_SECONDS",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "REDDIT_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "REDDIT_CLIENT_SECRET",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "REDDIT_POLL_SECONDS",
+      "type": "integer",
+      "default": "60",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "MASTODON_ENABLED",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "MASTODON_BASE_URL",
+      "type": "string",
+      "default": "https://mastodon.social",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "MASTODON_POLL_SECONDS",
+      "type": "integer",
+      "default": "60",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "NEWSAPI_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "NEWSAPI_POLL_SECONDS",
+      "type": "integer",
+      "default": "120",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "DISCOVERY_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "DISCOVERY_MAX_SITES_PER_CYCLE",
+      "type": "integer",
+      "default": "250",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "DISCOVERY_CYCLE_SECONDS",
+      "type": "integer",
+      "default": "3600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 news/social coverage as isolated V52-native services"
+    },
+    {
+      "name": "TRANSLATION_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "LIBRETRANSLATE_URL",
+      "type": "string",
+      "default": "http://127.0.0.1:5000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_CONCURRENCY",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "0.25",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_BATCH",
+      "type": "integer",
+      "default": "16",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_LEASE_SECONDS",
+      "type": "integer",
+      "default": "90",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_MAX_ATTEMPTS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TRANSLATION_REQUIRE_HEALTHY_ON_START",
+      "type": "integer",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Central translation service"
+    },
+    {
+      "name": "TELEGRAM_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_BOT_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_CHAT_ID",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_API_BASE",
+      "type": "string",
+      "default": "https://api.telegram.org",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_PER_CHAT_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "1.05",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_GLOBAL_RPS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_BATCH_ITEMS",
+      "type": "integer",
+      "default": "3",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_LEASE_SECONDS",
+      "type": "integer",
+      "default": "120",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "TELEGRAM_MAX_ATTEMPTS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Durable Telegram alert service"
+    },
+    {
+      "name": "STRUCTURED_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "STRUCTURED_CONCURRENCY",
+      "type": "integer",
+      "default": "6",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "STRUCTURED_DEFAULT_TIMEOUT",
+      "type": "integer",
+      "default": "15",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "PUBLIC_NATIVE_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "PUBLIC_NATIVE_CONCURRENCY",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_CONCURRENCY",
+      "type": "integer",
+      "default": "16",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "0.05",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_TIMEOUT_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_PAGE_WATCH_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_PAGE_WATCH_BATCH",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "INSTITUTIONAL_PAGE_WATCH_SECONDS",
+      "type": "integer",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "SEC_CURRENT_FORMS_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "SEC_CURRENT_FORMS_POLL_SECONDS",
+      "type": "integer",
+      "default": "120",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Structured/free-key API plane"
+    },
+    {
+      "name": "PROVIDER_FLOW_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "PROVIDER_FLOW_CONCURRENCY",
+      "type": "integer",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "PROVIDER_FLOW_MIN_GAP_SECONDS",
+      "type": "number",
+      "default": "0.05",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "PROVIDER_FLOW_TIMEOUT_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "PROVIDER_FLOW_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "NANSEN_BASE",
+      "type": "string",
+      "default": "https://api.nansen.ai/api/v1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "NANSEN_SMART_MONEY_CHAINS",
+      "type": "string",
+      "default": "ethereum,solana,base,arbitrum,bnb",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "NANSEN_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "NANSEN_TOKEN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_BASE",
+      "type": "string",
+      "default": "https://api.cryptoquant.com/v1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_EXCHANGES",
+      "type": "string",
+      "default": "all_exchange",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_WINDOW",
+      "type": "string",
+      "default": "block",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_POLL_SECONDS",
+      "type": "integer",
+      "default": "15",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "CRYPTOQUANT_EXTRA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_BASE",
+      "type": "string",
+      "default": "https://open-api-v4.coinglass.com",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_SYMBOLS",
+      "type": "string",
+      "default": "BTC,ETH,SOL,SUI",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_WHALE_POLL_SECONDS",
+      "type": "integer",
+      "default": "5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_BALANCE_POLL_SECONDS",
+      "type": "integer",
+      "default": "3600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "COINGLASS_EXTRA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "GLASSNODE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "REALTIME_FUNDAMENTAL_REST_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "AUTHORIZED_STRUCTURED_REST_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "REALTIME_FUNDAMENTAL_STREAMS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "AUTHORIZED_STRUCTURED_STREAMS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V50 smart-money/on-chain/provider-flow plane"
+    },
+    {
+      "name": "PREDICTION_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_GAMMA_MARKETS_URL",
+      "type": "string",
+      "default": "https://gamma-api.polymarket.com/markets",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_POLL_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_MAX_MARKETS",
+      "type": "integer",
+      "default": "1000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_WS_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_MARKET_WS",
+      "type": "string",
+      "default": "wss://ws-subscriptions-clob.polymarket.com/ws/market",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_WS_SUBSCRIBE_BATCH",
+      "type": "integer",
+      "default": "500",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_WS_MAX_TOKENS",
+      "type": "integer",
+      "default": "0",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "POLYMARKET_WS_EMIT_MS",
+      "type": "integer",
+      "default": "250",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_MARKETS_URL",
+      "type": "string",
+      "default": "https://external-api.kalshi.com/trade-api/v2/markets",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_POLL_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_MAX_MARKETS",
+      "type": "integer",
+      "default": "3000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_PAGE_LIMIT",
+      "type": "integer",
+      "default": "1000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "CUSTOM_STRUCTURED_REQUESTS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "FRED_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "BEA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "NVD_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "BLS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "BLS_POLL_SECONDS",
+      "type": "integer",
+      "default": "21600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 official macro data plane"
+    },
+    {
+      "name": "NOAA_CDO_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "COMPANIES_HOUSE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "COMPANIES_HOUSE_STREAM_KEY",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "COMPANIES_HOUSE_SEARCH",
+      "type": "string",
+      "default": "Coinbase",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "NASDAQ_DATA_LINK_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "CMC_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "ALPHA_VANTAGE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "FINNHUB_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "TWELVE_DATA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "TWELVE_DATA_SYMBOL",
+      "type": "string",
+      "default": "SPY",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "FMP_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "FMP_SYMBOL",
+      "type": "string",
+      "default": "COIN",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "COINALYZE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "ETHERSCAN_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "ALCHEMY_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "INFURA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "HELIUS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "MORALIS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "CHAINBASE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "OPENFIGI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "ACLED_ACCESS_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "KALSHI_API_KEY_ID",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored prediction-market plane"
+    },
+    {
+      "name": "ACLED_USERNAME",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "ALLIUM_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "ARKHAM_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "ARTEMIS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "BEACONCHAIN_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "BIRDEYE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "BITQUERY_API_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "CCDATA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "CENSUS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "COINAPI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "COINGECKO_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "COPERNICUS_CLIENT_ID",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "DAPPRADAR_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "DATABENTO_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "DEBANK_ACCESS_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "DISCORD_BOT_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "DUNE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "EDINET_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "EIA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "ENTSOE_SECURITY_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "EPO_OPS_CONSUMER_KEY",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "FDIC_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "FEC_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "FOOTPRINT_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "GIE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "GITHUB_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "GLASSNODE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "GOLDRUSH_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "GOLDSKY_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "LENS_API_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "LUNARCRUSH_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "MAGIC_EDEN_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "MASTODON_ACCESS_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "MESSARI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "META_AD_LIBRARY_ACCESS_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NANSEN_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NASA_FIRMS_MAP_KEY",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NASS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NBIM_VOTING_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NEWSAPIAI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "NEWSAPI_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "OPENCORPORATES_API_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "OPENSANCTIONS_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "OPENSKY_CLIENT_ID",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "QUICKNODE_ENDPOINT_URL",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "QUIVER_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "RATED_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "REDDIT_CLIENT_ID",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "RWA_XYZ_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "SAM_GOV_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "SANTIMENT_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "SOLSCAN_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "TALLY_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "TELEGRAM_API_ID",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "TENDERLY_ACCESS_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "THEGRAPH_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "TIINGO_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "TONAPI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "UNCOMTRADE_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "USPTO_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "X_BEARER_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "YOUTUBE_DATA_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "ZERION_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "A provider with no generic request definition remains registry-visible until a concrete lawful query is configured."
+    },
+    {
+      "name": "MARKET_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_RAW_QUEUE_SIZE",
+      "type": "integer",
+      "default": "100000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_RAW_SYNC_INTERVAL_MS",
+      "type": "integer",
+      "default": "250",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_RAW_SYNC_BYTES",
+      "type": "integer",
+      "default": "1048576",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_RAW_SEGMENT_BYTES",
+      "type": "integer",
+      "default": "1000000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_SEMANTIC_BATCH",
+      "type": "integer",
+      "default": "500",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_UNIVERSE_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_UNIVERSE_REFRESH_SECONDS",
+      "type": "number",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_UNIVERSE_VENUES",
+      "type": "string",
+      "default": "binance,binance_spot,bybit,bybit_spot,okx,okx_spot,mexc,mexc_spot,dydx,coinbase,kraken,kraken_spot,hyperliquid",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_STREAM_LIMIT",
+      "type": "integer",
+      "default": "200",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_STREAM_ROTATE_SECONDS",
+      "type": "number",
+      "default": "3600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_ANOMALY_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_ANOMALY_CHANGE_PCT",
+      "type": "number",
+      "default": "12",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_ANOMALY_MIN_QUOTE_VOLUME_USD",
+      "type": "number",
+      "default": "1000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_CRYPTO_ANOMALY_MAX_PER_CYCLE",
+      "type": "integer",
+      "default": "25",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MARKET_SYMBOLS",
+      "type": "string",
+      "default": "BTCUSDT,ETHUSDT,SUIUSDT",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "OKX_INSTRUMENTS",
+      "type": "string",
+      "default": "BTC-USDT-SWAP,ETH-USDT-SWAP,SUI-USDT-SWAP",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "DERIBIT_INSTRUMENTS",
+      "type": "string",
+      "default": "BTC-PERPETUAL,ETH-PERPETUAL",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "DERIBIT_TICK_INTERVAL",
+      "type": "string",
+      "default": "100ms",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "DYDX_MARKETS",
+      "type": "string",
+      "default": "BTC-USD,ETH-USD,SUI-USD",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "COINBASE_PRODUCTS",
+      "type": "string",
+      "default": "BTC-USD,ETH-USD,SUI-USD",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "KRAKEN_PRODUCTS",
+      "type": "string",
+      "default": "PI_XBTUSD,PI_ETHUSD",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "HYPERLIQUID_COINS",
+      "type": "string",
+      "default": "BTC,ETH,SUI",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "MEXC_SYMBOLS",
+      "type": "string",
+      "default": "BTC_USDT,ETH_USDT,SUI_USDT",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "BINANCE_SYMBOLS",
+      "type": "string",
+      "default": "BTCUSDT,ETHUSDT,SUIUSDT",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "BINANCE_AGGTRADE_ENABLED",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "BINANCE_AGGTRADE_BACKFILL_MAX",
+      "type": "integer",
+      "default": "10000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "DYDX_HIGH_FREQUENCY_STREAMS",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "LIQUIDITY_DEPTH",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Market plane - one process per exchange"
+    },
+    {
+      "name": "BYBIT_ORDERBOOK_DEPTH",
+      "type": "integer",
+      "default": "50",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "MARKET_BOOK_EMIT_SECONDS",
+      "type": "number",
+      "default": "0.5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "MARKET_TRADE_FLOW_EMIT_SECONDS",
+      "type": "number",
+      "default": "0.5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "MARKET_LARGE_TRADE_ALERT_USD",
+      "type": "integer",
+      "default": "1000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "MARKET_LIQUIDATION_ALERT_USD",
+      "type": "integer",
+      "default": "3000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "MARKET_FUNDING_ALERT_ABS",
+      "type": "number",
+      "default": "0.001",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "KRAKEN_BOOK_EMIT_SECONDS",
+      "type": "number",
+      "default": "0.5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "BINANCE_DEPTH_SPEED",
+      "type": "string",
+      "default": "500ms",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Bybit V5 linear WS accepts only 1,50,200,1000. Emission still truncates to LIQUIDITY_DEPTH."
+    },
+    {
+      "name": "BYBIT_WS",
+      "type": "string",
+      "default": "wss://stream.bybit.com/v5/public/linear",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "OKX_PUBLIC_WS",
+      "type": "string",
+      "default": "wss://ws.okx.com:8443/ws/v5/public",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "DERIBIT_WS",
+      "type": "string",
+      "default": "wss://www.deribit.com/ws/api/v2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "BINANCE_FUTURES_PUBLIC_WS",
+      "type": "string",
+      "default": "wss://fstream.binance.com/public/stream",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "BINANCE_FUTURES_MARKET_WS",
+      "type": "string",
+      "default": "wss://fstream.binance.com/market/stream",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "BINANCE_FUTURES_REST",
+      "type": "string",
+      "default": "https://fapi.binance.com",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "MEXC_FUTURES_WS",
+      "type": "string",
+      "default": "wss://contract.mexc.com/edge",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "DYDX_WS",
+      "type": "string",
+      "default": "wss://indexer.dydx.trade/v4/ws",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "COINBASE_WS",
+      "type": "string",
+      "default": "wss://advanced-trade-ws.coinbase.com",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "KRAKEN_FUTURES_WS",
+      "type": "string",
+      "default": "wss://futures.kraken.com/ws/v1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "HYPERLIQUID_WS",
+      "type": "string",
+      "default": "wss://api.hyperliquid.xyz/ws",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "COINGECKO_GLOBAL_URL",
+      "type": "string",
+      "default": "https://api.coingecko.com/api/v3/global",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "FEAR_GREED_URL",
+      "type": "string",
+      "default": "https://api.alternative.me/fng/?limit=1&format=json",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "DEFILLAMA_PROTOCOLS_URL",
+      "type": "string",
+      "default": "https://api.llama.fi/protocols",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Optional endpoint overrides"
+    },
+    {
+      "name": "SUPERVISOR_SERVICES",
+      "type": "string",
+      "default": "news_hot,gdelt,google_mesh,x_social,bluesky,social_pollers,news_coverage,sitemap,news_processor,news_enrichment,translation,alerts,structured,institutional_connectors,provider_flows,prediction,official_native,altdata_native,filings_native,discovery,market_bybit,market_okx,market_deribit,market_binance,market_mexc,market_dydx,market_coinbase,market_kraken,market_hyperliquid,market_core",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Supervisor"
+    },
+    {
+      "name": "SUPERVISOR_RESTART_LIMIT",
+      "type": "integer",
+      "default": "5",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Supervisor"
+    },
+    {
+      "name": "SUPERVISOR_RESTART_WINDOW_SECONDS",
+      "type": "integer",
+      "default": "600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Supervisor"
+    },
+    {
+      "name": "DIAGNOSTIC_MIN_UNIQUE_20M",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "DIAGNOSTIC_MIN_MATERIAL_UNIQUE_20M",
+      "type": "integer",
+      "default": "100",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "DIAGNOSTIC_MIN_UNDER_60S_RATIO",
+      "type": "number",
+      "default": "0.35",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "DIAGNOSTIC_MIN_UNDER_15S_RATIO",
+      "type": "number",
+      "default": "0.10",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "DIAGNOSTIC_MAX_TRANSLATION_BACKLOG_GROWTH",
+      "type": "integer",
+      "default": "50",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "DIAGNOSTIC_MAX_CPU_PSI_AVG10",
+      "type": "integer",
+      "default": "40",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Release/diagnostic quality gates - these are intentionally critical."
+    },
+    {
+      "name": "PREFLIGHT_STRICT_NETWORK",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Preflight"
+    },
+    {
+      "name": "ALPHASENSE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "APPTOPIA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "AP_MEDIA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "BITCOIN_NODE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "BLOOMBERG_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "CBINSIGHTS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "CIRCANA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "CIRIUM_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "COMPANIES_HOUSE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "COMPSTAK_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "COPERNICUS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "COSTAR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "CRUNCHBASE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DATAMYNE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DATAWEAVE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DAT_FREIGHT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DBRS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DEALOGIC_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DISCORD_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DOWJONES_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "DTCC_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "EARNEST_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ENTSOE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ENTSOG_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ENVERUS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "EPFR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "EPO_OPS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ETF_INVESCO_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ETF_ISHARES_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ETF_PRIMARY_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ETF_SPDR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ETF_VANGUARD_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "EVM_NODE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "FACTSET_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "FINRA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "FITCH_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "FLIGHTAWARE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "FREIGHTOS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "GITHUB_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "GITHUB_SECURITY_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "GLASS_LEWIS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "GREEN_STREET_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "GRID_LOAD_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "IBES_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ICC_TRADE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ICE_CARBON_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ICE_WAREHOUSE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "IMF_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "IMPORTGENIUS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "IQVIA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ISPOT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ISS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "KBRA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "KPLER_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LENS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LIGHTCAST_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LINKUP_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LIPPER_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LME_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LSEG_CORPACTIONS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LSEG_DEALS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "LSEG_MRN_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MAXAR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "META_AD_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MOODYS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MORNINGSTAR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MSCI_REAL_ASSETS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MSRB_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "MUNICHRE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NASA_FIRMS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NBIM_VOTING_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NEWYORKFED_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NHTSA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NIELSENIQ_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NIELSEN_AD_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NINEFIN_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "NUMERATOR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "OAG_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "OCC_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "OPENCORPORATES_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "OPENFIGI_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "OPENSKY_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ORBITAL_INSIGHT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PACER_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PANJIVA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PIERS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PITCHBOOK_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PLACER_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PLANET_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PREQIN_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "PROFITERO_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "QUARTR_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "REDDIT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "REVELIO_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SAM_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SECOND_MEASURE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SEMI_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SENSOR_TOWER_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SIMILARWEB_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SOLANA_NODE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SPGI_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SP_MINING_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SP_RATINGS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "STOCKTWITS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SUI_NODE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SWFI_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SWIFT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "SYMPHONY_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "TECHINSIGHTS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "TEGUS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "TELEGRAM_PUBLIC_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "TRENDFORCE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "TREPP_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "UNCOMTRADE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "USPTO_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "V34_AUTHORIZED_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "V35_AUTHORIZED_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "V35_PUBLIC_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "V36_AUTHORIZED_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "VERISK_PCS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "VISIBLE_ALPHA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "VORTEXA_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "WARN_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "WIPO_PATENTSCOPE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "WSTS_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "YELLOWSTONE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "YIPIT_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "YOUTUBE_CONNECTORS_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Each value is a JSON list of operator-authorized REST/WS connector specs; blank means intentionally inactive."
+    },
+    {
+      "name": "ACLED_PASSWORD",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COPERNICUS_CLIENT_SECRET",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "EPO_OPS_CONSUMER_SECRET",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "KALSHI_PRIVATE_KEY_PATH",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "OPENSKY_CLIENT_SECRET",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TELEGRAM_API_HASH",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ACLED_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ALCHEMY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ALLIUM_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ALPHAVANTAGE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ARKHAM_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ARTEMIS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "BEACONCHAIN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "BEA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "BIRDEYE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "BITQUERY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "BLS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "CCDATA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "CENSUS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "CHAINBASE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COINALYZE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COINAPI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COINGECKO_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COINMARKETCAP_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COINPAPRIKA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COMPANIES_HOUSE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "COPERNICUS_CDSE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "CRYPTOPANIC_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "DAPPRADAR_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "DATABENTO_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "DEBANK_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "DISCORD_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "DUNE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "EDINET_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "EIA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ENTSOE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "EPO_OPS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ETHERSCAN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FDIC_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FEC_OPENFEC_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FINNHUB_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FMP_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FOOTPRINT_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "FRED_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "GIE_AGSI_ALSI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "GITHUB_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "GOLDRUSH_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "GOLDSKY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "HELIUS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "INFURA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "KALSHI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "LENS_API_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "LUNARCRUSH_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "MAGIC_EDEN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "MASTODON_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "MESSARI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "META_AD_LIBRARY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "MORALIS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NANSEN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NASA_FIRMS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NASDAQ_DATA_LINK_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NASS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NBIM_VOTING_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NEWSAPIAI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NEWSAPI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NOAA_CDO_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "NVD_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "OPENCORPORATES_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "OPENFIGI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "OPENSANCTIONS_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "OPENSKY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "QUICKNODE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "QUIVER_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "RATED_NETWORK_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "REDDIT_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "RESERVOIR_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "RWA_XYZ_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "SAM_GOV_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "SANTIMENT_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "SOLSCAN_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TALLY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TELEGRAM_API_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TENDERLY_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "THEGRAPH_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TIINGO_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TONAPI_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "TWELVEDATA_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "UNCOMTRADE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "USPTO_ODP_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "X_API_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "YOUTUBE_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "ZERION_QUERIES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Per-provider V36-compatible configured query hooks restored."
+    },
+    {
+      "name": "USASPENDING_SEARCH_BODY_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "USASPENDING_POLL_SECONDS",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "FCA_SHORT_POLL_SECONDS",
+      "type": "integer",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "SEC_FUND_POLL_SECONDS",
+      "type": "integer",
+      "default": "1800",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "GLEIF_WATCH_NAMES",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "ENTITY_REFRESH_SECONDS",
+      "type": "integer",
+      "default": "21600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "SEC_FTD_FILES_PER_CHECK",
+      "type": "integer",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "SEC_FTD_MAX_ROWS",
+      "type": "integer",
+      "default": "60000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "SEC_FTD_POLL_SECONDS",
+      "type": "integer",
+      "default": "21600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "OPENSKY_ENABLED",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "OPENSKY_POLL_SECONDS",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "EIA_ROUTES_JSON",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "EIA_POLL_SECONDS",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V34/V35 native public collector controls"
+    },
+    {
+      "name": "TREASURY_RATES_POLL_SECONDS",
+      "type": "integer",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 official rates and gold data plane"
+    },
+    {
+      "name": "NYFED_RATES_POLL_SECONDS",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 official rates and gold data plane"
+    },
+    {
+      "name": "GOLD_HOLDINGS_POLL_SECONDS",
+      "type": "integer",
+      "default": "3600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 official rates and gold data plane"
+    },
+    {
+      "name": "WGC_AUTH_COOKIE",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "V59 official rates and gold data plane"
+    },
+    {
+      "name": "WGC_GOLD_POLL_SECONDS",
+      "type": "integer",
+      "default": "21600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 official rates and gold data plane"
+    },
+    {
+      "name": "PREMIUM_ACTIONS_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_TOKEN",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_BASE",
+      "type": "string",
+      "default": "https://api.unusualwhales.com",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_FLOW_POLL_SECONDS",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_DARKPOOL_POLL_SECONDS",
+      "type": "integer",
+      "default": "3",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_INSIDER_POLL_SECONDS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_CONGRESS_POLL_SECONDS",
+      "type": "integer",
+      "default": "60",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_CRYPTO_POLL_SECONDS",
+      "type": "integer",
+      "default": "4",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "UNUSUAL_WHALES_MIN_DARKPOOL_PREMIUM",
+      "type": "integer",
+      "default": "250000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_WS",
+      "type": "string",
+      "default": "wss://leviathan.whale-alert.io/ws",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_SOCIALS",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_MIN_VALUE_USD",
+      "type": "integer",
+      "default": "1000000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_BLOCKCHAINS",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_SYMBOLS",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "WHALE_ALERT_TX_TYPES",
+      "type": "string",
+      "default": "",
+      "secret": false,
+      "operator_facing": true,
+      "category": "Restored V33/V50 Wall-Street / Whale authorized providers"
+    },
+    {
+      "name": "OPENAI_SEMANTICS_ENABLED",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "OPENAI_API_KEY",
+      "type": "string",
+      "default": "",
+      "secret": true,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "OPENAI_BASE_URL",
+      "type": "string",
+      "default": "https://api.openai.com/v1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "OPENAI_MODEL",
+      "type": "string",
+      "default": "gpt-5.4-mini",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "OPENAI_SEMANTICS_MIN_MATERIALITY",
+      "type": "integer",
+      "default": "8",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "INTELLIGENCE_MIN_HISTORICAL_SAMPLES",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "INTELLIGENCE_SIGNAL_EXPIRY_SECONDS",
+      "type": "integer",
+      "default": "1800",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 intelligence"
+    },
+    {
+      "name": "INTELLIGENCE_FASTLANE_BATCH",
+      "type": "integer",
+      "default": "20",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V59 impact router"
+    },
+    {
+      "name": "RESEARCH_MIN_TRAINING_ROWS",
+      "type": "integer",
+      "default": "100",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 research"
+    },
+    {
+      "name": "RESEARCH_CYCLE_SECONDS",
+      "type": "integer",
+      "default": "900",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 research"
+    },
+    {
+      "name": "QUALIFICATION_MIN_EVENTS",
+      "type": "integer",
+      "default": "200",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 qualification"
+    },
+    {
+      "name": "QUALIFICATION_MIN_RESPONSES",
+      "type": "integer",
+      "default": "100",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 qualification"
+    },
+    {
+      "name": "QUALIFICATION_MAX_BRIER",
+      "type": "number",
+      "default": "0.24",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 qualification"
+    },
+    {
+      "name": "QUALIFICATION_MAX_CALIBRATION_ERROR",
+      "type": "number",
+      "default": "0.15",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 qualification"
+    },
+    {
+      "name": "MARKET_RAW_COMPRESS_AFTER_SECONDS",
+      "type": "integer",
+      "default": "600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "MARKET_RAW_RETENTION_DAYS",
+      "type": "integer",
+      "default": "14",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "MARKET_ARCHIVE_RETENTION_DAYS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "OPERATIONAL_DB_RETENTION_DAYS",
+      "type": "integer",
+      "default": "30",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "DISK_HIGH_WATERMARK_RATIO",
+      "type": "number",
+      "default": "0.85",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "DISK_CRITICAL_WATERMARK_RATIO",
+      "type": "number",
+      "default": "0.93",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "MAINTENANCE_CYCLE_SECONDS",
+      "type": "integer",
+      "default": "300",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V52 storage lifecycle"
+    },
+    {
+      "name": "MODEL_BOOSTING_MIN_ROWS",
+      "type": "integer",
+      "default": "200",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57 model governance"
+    },
+    {
+      "name": "MODEL_SIGNAL_LABELS_ONLY",
+      "type": "boolean",
+      "default": "1",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 leakage-safe adaptive learning"
+    },
+    {
+      "name": "MODEL_MAX_TRAIN_ROWS",
+      "type": "integer",
+      "default": "2000",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 resource bounds"
+    },
+    {
+      "name": "MODEL_MAX_NEW_PER_STAGE",
+      "type": "integer",
+      "default": "2",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 resource bounds"
+    },
+    {
+      "name": "MODEL_RETRAIN_MIN_SECONDS",
+      "type": "integer",
+      "default": "21600",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 resource bounds"
+    },
+    {
+      "name": "MODEL_LINEAR_EPOCHS",
+      "type": "integer",
+      "default": "80",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 resource bounds"
+    },
+    {
+      "name": "TEMPORAL_TRAINING_ENABLED",
+      "type": "boolean",
+      "default": "0",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 optional heavy training"
+    },
+    {
+      "name": "SIGNAL_ROUND_TRIP_COST_BPS",
+      "type": "number",
+      "default": "10",
+      "secret": false,
+      "operator_facing": true,
+      "category": "V57.1 barrier evaluation"
+    }
+  ]
+}

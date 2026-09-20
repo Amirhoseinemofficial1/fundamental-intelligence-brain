@@ -1,0 +1,57 @@
+[Unit]
+Description=V59 Impact-Routed Fundamental Intelligence Supervisor
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=v57fund
+Group=v57fund
+WorkingDirectory=/opt/v57-fundamental
+EnvironmentFile=/etc/v57-fundamental.env
+EnvironmentFile=-/etc/v57-resource-profile.env
+Environment=V57_PACKAGE_ROOT=/opt/v57-fundamental
+Environment=V56_PACKAGE_ROOT=/opt/v57-fundamental
+Environment=V52_PACKAGE_ROOT=/opt/v57-fundamental
+Environment=PYTHONPATH=/opt/v57-fundamental/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=NUMEXPR_NUM_THREADS=1
+Environment=VECLIB_MAXIMUM_THREADS=1
+CPUAccounting=true
+MemoryAccounting=true
+CPUQuota=150%
+MemoryHigh=2500M
+MemoryMax=3G
+MemorySwapMax=512M
+TasksMax=192
+Nice=5
+ExecStartPre=/opt/v57-fundamental/.venv/bin/python -m v52.diagnostics.preflight
+ExecStartPre=/opt/v57-fundamental/.venv/bin/python -m v52.runtime.bootstrap
+ExecStart=/opt/v57-fundamental/.venv/bin/python -m v52.runtime.supervisor
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=75
+KillSignal=SIGTERM
+KillMode=mixed
+UMask=0027
+LimitNOFILE=131072
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/v57-fundamental
+
+[Install]
+WantedBy=multi-user.target
