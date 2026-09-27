@@ -1,0 +1,48 @@
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime state, logs, and learned artifacts
+data/
+logs/
+models/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.log
+
+# Generated release bundles and duplicated verification trees
+dist/
+deployment/artifact-check/
+artifacts/ssh_known_hosts
+artifacts/rar_files.txt
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
